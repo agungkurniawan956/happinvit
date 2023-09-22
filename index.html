@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;0,800;1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Happinvit</title>
+
+    <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <header class="navbar">
+      <a href="#" class="nav-brand">Happinvit</a>
+
+      <nav class="nav-link hidden">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#tema">Tema</a></li>
+          <li>
+            <a href="#artikel">Artikel</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-menu">
+        <a href="#login" class="btn-login">Login</a>
+        <div class="hamburger-menu">
+          <i data-feather="menu"></i>
+        </div>
+      </div>
+    </header>
+    <!-- Navbar End -->
+
+    <main>
+      <!-- Herro Start -->
+      <section class="home" id="home">
+        <div class="tagline">
+          <h2>Undangan Digital</h2>
+          <p>Keren, Modern, Cepat.</p>
+          <p>
+            Rasakan kemudahan undangan digital bersama kami, hubungi kami
+            sekarang dan ambil promo menariknya!
+          </p>
+          <a href="#">Order Now</a>
+        </div>
+        <div class="slider">
+          <div class="slide">
+            <img src="img/1.jpg" alt="Slide 1" />
+          </div>
+          <div class="slide">
+            <img src="img/2.jpg" alt="Slide 2" />
+          </div>
+          <div class="slide">
+            <img src="img/3.jpg" alt="Slide 3" />
+          </div>
+        </div>
+      </section>
+      <!-- Herro End -->
+
+      <!-- visitor Start -->
+      <section id="visitor" class="visitor">
+        <div class="visitor-content">
+          <h2>Realtime Visitor</h2>
+
+          <div class="row">
+            <div class="visitor-card">
+              <h3>156</h3>
+              <p><i data-feather="users"></i></p>
+              <p>Visitor Saat Ini</p>
+            </div>
+            <div class="visitor-card">
+              <h3>156</h3>
+              <p><i data-feather="user"></i></p>
+              <p>Visitor Unik</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- visitor end -->
+    </main>
+    <script src="script.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

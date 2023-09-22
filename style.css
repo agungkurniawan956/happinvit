@@ -1,0 +1,248 @@
+:root {
+  --happinvit-50: #f3faf9;
+  --happinvit-100: #d7f0ed;
+  --happinvit-200: #b0dfdc;
+  --happinvit-300: #80c8c6;
+  --happinvit-400: #55acac;
+  --happinvit-500: #3c8e90;
+  --happinvit-600: #2e7073;
+  --happinvit-700: #285a5d;
+  --happinvit-800: #24484b;
+  --happinvit-900: #234143;
+  --happinvit-950: #0e2325;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  columns: var(--happinvit-950);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--happinvit-200);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 99;
+}
+
+.navbar .nav-brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--happinvit-950);
+  font-style: italic;
+}
+
+.navbar .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar .nav-menu .hamburger-menu {
+  display: none;
+}
+
+.navbar .nav-link ul {
+  display: flex;
+  list-style-type: none;
+}
+.navbar .nav-link a {
+  font-size: 1rem;
+  color: #0e2325;
+  margin: 0 1rem;
+  display: inline-block;
+}
+
+.navbar .nav-link a:hover {
+  font-weight: 400;
+}
+
+.navbar .nav-link a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid var(--happinvit-950);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .nav-link a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .btn-login {
+  color: #0e2325;
+  padding: 0.5rem 1rem;
+  /* background-color: #285a5d; */
+  border: 1px solid var(--happinvit-700);
+  border-radius: 5px;
+}
+
+.navbar .btn-login:hover {
+  color: #f3faf9;
+  background-color: #2e7073;
+}
+
+/* Herro */
+.home {
+  /* min-height: 100vh; */
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem 7% 2rem;
+  /* background-color: #2e7073; */
+}
+
+.home .tagline {
+  width: 50%;
+  /* background-color: #80c8c6; */
+}
+
+.home .tagline h2 {
+  margin-bottom: 0.5rem;
+}
+
+.home .tagline p {
+  margin-bottom: 2rem;
+}
+
+.home .tagline a {
+  padding: 0.7rem 2rem;
+  background-color: var(--happinvit-500);
+  border-radius: 5px;
+  color: white;
+  box-shadow: 2px 2px 5px black;
+}
+
+.home .slider {
+  margin-top: 3rem;
+  width: 50%;
+  overflow: hidden;
+  /* background-color: aqua; */
+}
+.home .slider .slide {
+  width: 100%;
+  display: none;
+  transition: opacity 1s ease-in-out;
+  /* background-color: aqua; */
+}
+
+.home .slider .slide img {
+  width: 90%;
+}
+/* .slide {
+  width: 100%;
+  display: none;
+  transition: opacity 1s ease-in-out;
+} */
+
+/* .slide .active {
+  opacity: 1;
+  display: block;
+} */
+
+/* visitor */
+.visitor .visitor-content {
+  padding: 8rem 7% 2rem;
+}
+
+.visitor .visitor-content h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.visitor .visitor-content .row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.visitor .visitor-content .row .visitor-card {
+  border-radius: 20px;
+  text-align: center;
+  width: 15rem;
+  box-shadow: 2px 2px 4px 2px black;
+  padding: 1rem;
+  background-color: var(--happinvit-300);
+}
+.visitor .visitor-content .row .visitor-card h3 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  color: var(--happinvit-900);
+}
+.visitor .visitor-content .row .visitor-card p {
+  padding: 0.8rem;
+  font-weight: 700;
+}
+
+/* media queries */
+
+/* tablet */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+  /* navbar */
+  .hidden {
+    display: none;
+  }
+  .navbar .nav-link ul {
+    flex-direction: column;
+    position: absolute;
+    top: 6rem;
+    font-size: 3rem;
+    font-weight: 700;
+    right: 1rem;
+    box-shadow: 2px 2px 4px 2px black;
+    padding: 2rem 4rem;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 99;
+  }
+
+  .navbar .nav-link ul li a {
+    padding: 0.1rem;
+  }
+
+  .navbar .nav-menu .hamburger-menu {
+    display: flex;
+  }
+
+  /* home */
+  .home {
+    padding: 8rem 7% 2rem;
+  }
+}
+
+/* mobile */
+
+@media screen and (max-width: 429px) {
+  /* visitor */
+  .visitor .visitor-content .row {
+    flex-wrap: wrap;
+  }
+
+  .visitor .visitor-content .row .visitor-card {
+    width: 70%;
+  }
+}
