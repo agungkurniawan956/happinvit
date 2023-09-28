@@ -164,6 +164,52 @@ body {
   display: block;
 } */
 
+/* About */
+.about {
+  padding: 4rem 7% 4rem;
+}
+
+.about h2,
+.about p {
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 1rem;
+}
+
+.about p {
+  margin-bottom: 3rem;
+  font-size: small;
+  color: var(--font-gray);
+}
+
+.about .row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about .row .about-image {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-image img {
+  width: 100%;
+}
+
+.about .row .about-article {
+  flex: 1 1 45rem;
+  line-height: 1.5rem;
+}
+
+.about .row .about-article h3 {
+  margin-bottom: 1rem;
+}
+.about .row .about-article p {
+  text-align: start;
+}
+
 /* service */
 .service {
   padding: 4rem 7% 4rem;
@@ -202,8 +248,8 @@ body {
 }
 
 /* visitor */
-.visitor .visitor-content {
-  padding: 8rem 7% 2rem;
+.visitor {
+  padding: 8rem 7% 4rem;
 }
 
 .visitor .visitor-content h2 {
@@ -231,6 +277,79 @@ body {
 .visitor .visitor-content .row .visitor-card p {
   padding: 0.8rem;
   font-weight: 700;
+}
+
+/* footer */
+.footer {
+  background-color: var(--happinvit-950);
+  padding: 4rem 7% 2rem;
+}
+
+.footer .row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: warp;
+  justify-content: center;
+  margin-bottom: 2rem;
+  /* align-items: center; */
+}
+
+.footer .row .footer-about,
+.footer .row .footer-navigation,
+.footer .row .footer-sosmed {
+  width: 33%;
+  padding-inline: 1rem;
+}
+
+.footer .row .footer-about h2,
+.footer .row .footer-navigation h2,
+.footer .row .footer-sosmed h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+.footer .row .footer-about p {
+  color: #999;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+}
+
+.footer .row .footer-navigation ul li,
+.footer .row .footer-sosmed ul li {
+  list-style-type: none;
+  padding-block: 0.5rem;
+}
+.footer .row .footer-navigation ul li a,
+.footer .row .footer-sosmed ul li a {
+  color: var(--font-gray);
+  display: flex;
+  align-items: center;
+}
+
+.footer .row .footer-navigation ul li a:hover,
+.footer .row .footer-sosmed ul li a:hover {
+  color: var(--happinvit-300);
+}
+
+.footer .row .footer-sosmed ul li a span {
+  margin-left: 5px;
+}
+
+.footer hr {
+  border: 1px solid var(--happinvit-900);
+  margin-bottom: 2rem;
+}
+
+.footer .footer-copyright,
+.footer .footer-copyright a {
+  text-align: center;
+  color: var(--font-gray);
+  font-weight: 300;
+  font-size: normal;
+}
+
+.footer .footer-copyright a:hover {
+  font-weight: 500;
+  color: var(--happinvit-400);
 }
 
 /* media queries */
@@ -297,5 +416,15 @@ body {
   }
   .service .row .service-card img {
     width: 40%;
+  }
+
+  /* footer */
+  .footer .row {
+    flex-direction: column;
+  }
+  .footer .row .footer-about,
+  .footer .row .footer-navigation,
+  .footer .row .footer-sosmed {
+    width: 100%;
   }
 }
