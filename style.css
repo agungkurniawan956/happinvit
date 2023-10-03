@@ -187,7 +187,6 @@ body {
 .about .row {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -248,10 +247,75 @@ body {
   width: 150px;
 }
 
-/* visitor */
-.visitor {
+/* katalog */
+.visitor,
+.katalog {
   padding: 8rem 7% 4rem;
 }
+.katalog h2 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.katalog p {
+  text-align: center;
+  font-size: medium;
+  color: var(--font-gray);
+  margin-bottom: 1rem;
+}
+
+.katalog .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.katalog .katalog-card {
+  text-align: center;
+  /* padding: 1rem; */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px black;
+  flex: 1 1 15rem;
+}
+
+.katalog .row .katalog-card-img {
+  width: 100%;
+  background-color: #2e7073;
+}
+
+.katalog .row .katalog-card-title {
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+.katalog .row .katalog-card-body {
+  padding: 1rem;
+  text-align: left;
+  font-size: small;
+}
+
+.katalog .row .katalog-card-footer {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  border-top: 1px solid rgb(167, 167, 167);
+}
+.katalog .row .katalog-card-footer a {
+  width: 100%;
+  height: auto;
+}
+.katalog .row .katalog-card-footer a:hover {
+  color: #25d366;
+}
+
+hr {
+  border-bottom: 1px solid slategrey;
+}
+
+/* visitor */
 
 .visitor .visitor-content h2 {
   text-align: center;
@@ -403,6 +467,10 @@ body {
 /* mobile */
 
 @media screen and (max-width: 429px) {
+  .about .row {
+    flex-wrap: wrap;
+  }
+
   /* visitor */
   .visitor .visitor-content .row {
     flex-wrap: wrap;
